@@ -35,9 +35,13 @@ namespace FanSoft.AM.Infra.CrossCuting.IoC
             services.AddScoped<Data.EF.AgendaMedicaDataContext>();
             services.AddTransient<Domain.Contracts.Infra.Data.IUnitOfWork, Data.EF.UnitOfWorkEF>();
 
-            services.AddScoped<Data.ADO.AgendaMedicaDataContext>();
-            services.AddTransient<Domain.Contracts.Repositories.IPacienteReadRepository, 
-                Data.ADO.Repositories.PacienteReadRepositoryADO>();
+            services.AddScoped<Data.Dapper.AgendaMedicaDataContext>();
+            services.AddTransient<Domain.Contracts.Repositories.IPacienteReadRepository,
+                Data.Dapper.Repositories.PacienteReadRepositoryDapper>();
+
+            //services.AddScoped<Data.ADO.AgendaMedicaDataContext>();
+            //services.AddTransient<Domain.Contracts.Repositories.IPacienteReadRepository, 
+            //    Data.ADO.Repositories.PacienteReadRepositoryADO>();
 
             //services.AddTransient<Domain.Contracts.Repositories.IPacienteReadRepository, Data.EF.Repositories.PacienteReadRepositoryEF>();
             services.AddTransient<Domain.Contracts.Repositories.IPacienteWriteRepository, Data.EF.Repositories.PacienteWriteRepositoryEF>();

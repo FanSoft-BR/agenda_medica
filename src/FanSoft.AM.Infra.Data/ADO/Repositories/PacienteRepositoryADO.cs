@@ -10,19 +10,19 @@ namespace FanSoft.AM.Infra.Data.ADO.Repositories
     public class PacienteReadRepositoryADO : IPacienteReadRepository
     {
         private readonly AgendaMedicaDataContext _ctx;
-        private string query;
+        private string _query;
 
         public PacienteReadRepositoryADO(AgendaMedicaDataContext ctx)
         {
             _ctx = ctx;
-            query = $@"SELECT 
+            _query = $@"SELECT 
 	                        p.Id, p.Nome, p.Sobrenome, p.Nascimento, p.SexoId FROM Paciente p";
         }
 
         public IEnumerable<Paciente> Get()
         {
             
-            var dr = _ctx.ExecuteCommandWithData(query);
+            var dr = _ctx.ExecuteCommandWithData(_query);
 
             if (dr.HasRows)
             {
@@ -45,8 +45,7 @@ namespace FanSoft.AM.Infra.Data.ADO.Repositories
 
         public Paciente Get(int id)
         {
-            query += $" WHERE p.Id = '{id}'";
-            var dr = _ctx.ExecuteCommandWithData(query);
+            var dr = _ctx.ExecuteCommandWithData(_query + $" WHERE p.Id = '{id}'");
 
             if (dr.HasRows)
             {
@@ -69,7 +68,7 @@ namespace FanSoft.AM.Infra.Data.ADO.Repositories
 
         public async Task<IEnumerable<Paciente>> GetAsync()
         {
-            var dr = await _ctx.ExecuteCommandWithDataAsync(query);
+            var dr = await _ctx.ExecuteCommandWithDataAsync(_query);
 
             if (dr.HasRows)
             {
@@ -92,8 +91,8 @@ namespace FanSoft.AM.Infra.Data.ADO.Repositories
 
         public async Task<Paciente> GetAsync(int id)
         {
-            query += $" WHERE p.Id = '{id}'";
-            var dr = await _ctx.ExecuteCommandWithDataAsync(query);
+            _query += $" WHERE p.Id = '{id}'";
+            var dr = await _ctx.ExecuteCommandWithDataAsync(_query);
 
             if (dr.HasRows)
             {
