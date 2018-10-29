@@ -9,6 +9,7 @@ namespace FanSoft.AM.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            Infra.CrossCuting.IoC.Configuration.RegisterServices(services);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

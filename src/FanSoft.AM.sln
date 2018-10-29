@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FanSoft.AM.Api", "FanSoft.AM.Api\FanSoft.AM.Api.csproj", "{B41C19F0-A2EC-4B27-9F32-AC97AF98EE0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanSoft.AM.Domain", "FanSoft.AM.Domain\FanSoft.AM.Domain.csproj", "{705FEDCF-95C1-4244-9AB9-51B86CB406A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanSoft.AM.Infra.Data", "FanSoft.AM.Infra.Data\FanSoft.AM.Infra.Data.csproj", "{E2B8D0DE-936E-4EB9-808C-5AED5D0515FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanSoft.AM.Infra.CrossCuting", "FanSoft.AM.Infra.CrossCuting\FanSoft.AM.Infra.CrossCuting.csproj", "{5C1FB264-C893-4CD1-B053-22B575A86E62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{B41C19F0-A2EC-4B27-9F32-AC97AF98EE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B41C19F0-A2EC-4B27-9F32-AC97AF98EE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B41C19F0-A2EC-4B27-9F32-AC97AF98EE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{705FEDCF-95C1-4244-9AB9-51B86CB406A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705FEDCF-95C1-4244-9AB9-51B86CB406A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705FEDCF-95C1-4244-9AB9-51B86CB406A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705FEDCF-95C1-4244-9AB9-51B86CB406A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2B8D0DE-936E-4EB9-808C-5AED5D0515FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B8D0DE-936E-4EB9-808C-5AED5D0515FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B8D0DE-936E-4EB9-808C-5AED5D0515FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B8D0DE-936E-4EB9-808C-5AED5D0515FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C1FB264-C893-4CD1-B053-22B575A86E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C1FB264-C893-4CD1-B053-22B575A86E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C1FB264-C893-4CD1-B053-22B575A86E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C1FB264-C893-4CD1-B053-22B575A86E62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
