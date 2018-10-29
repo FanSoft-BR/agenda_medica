@@ -7,12 +7,11 @@ namespace FanSoft.AM.Domain.Mediator.Paciente.Inserir
 
         public Validator()
         {
-
             RuleFor(x => x.Nome)
                 .NotEmpty().WithMessage("Nome é obrigatório")
                 .Length(1, 80).WithMessage("Nome não pode ser maior que 80 caracteres");
 
-            RuleFor(x => x.Nome)
+            RuleFor(x => x.Sobrenome)
                 .NotEmpty().WithMessage("Sobrenome é obrigatório")
                 .Length(1, 80).WithMessage("SobreNome não pode ser maior que 80 caracteres");
 

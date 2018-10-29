@@ -7,7 +7,6 @@ namespace FanSoft.AM.Domain.Mediator.Paciente.Inserir
     {
         public Request(){}
 
-        public int Id { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public DateTime Nascimento { get; set; }

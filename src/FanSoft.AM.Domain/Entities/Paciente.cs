@@ -31,5 +31,13 @@ namespace FanSoft.AM.Domain.Entities
 
         public int SexoId { get; private set; }
         public Sexo Sexo { get; private set; }
+
+        public void Atualizar(string nome, string sobrenome, DateTime nascimento, int sexoId)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+            Nascimento = nascimento;
+            SexoId = sexoId;
+        }
     }
 }
