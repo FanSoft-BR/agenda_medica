@@ -1,4 +1,4 @@
-﻿using FanSoft.AM.Domain.Contracts.Infra;
+﻿using FanSoft.AM.Domain.Contracts.Infra.Data;
 using System;
 using System.Threading.Tasks;
 

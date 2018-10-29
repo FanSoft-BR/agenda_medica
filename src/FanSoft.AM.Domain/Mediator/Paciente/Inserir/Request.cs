@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace FanSoft.AM.Domain.Commands.Paciente.Inserir
+namespace FanSoft.AM.Domain.Mediator.Paciente.Inserir
 {
     public class Request : IRequest<Response>
     {

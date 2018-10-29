@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FanSoft.AM.Domain\FanSoft.AM.Domain.csproj" />
     <ProjectReference Include="..\FanSoft.AM.Infra.Data\FanSoft.AM.Infra.Data.csproj" />
+    <ProjectReference Include="..\FanSoft.AM.Infra.Services\FanSoft.AM.Infra.Services.csproj" />
   </ItemGroup>
 
 </Project>

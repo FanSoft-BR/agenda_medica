@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace FanSoft.AM.Domain.Commands
+namespace FanSoft.AM.Domain.Mediator
 {
     public class Response
     {

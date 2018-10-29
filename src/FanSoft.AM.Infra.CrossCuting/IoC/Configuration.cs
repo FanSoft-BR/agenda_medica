@@ -1,4 +1,4 @@
-﻿using FanSoft.AM.Domain.Commands;
+﻿using FanSoft.AM.Domain.Mediator;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +12,7 @@ namespace FanSoft.AM.Infra.CrossCuting.IoC
         {
             registerMediatr(services);
             registerData(services);
+            registerAppServices(services);
 
         }
 
@@ -32,11 +33,16 @@ namespace FanSoft.AM.Infra.CrossCuting.IoC
         private static void registerData(IServiceCollection services)
         {
             services.AddScoped<Data.EF.AgendaMedicaDataContext>();
-            services.AddTransient<Domain.Contracts.Infra.IUnitOfWork, Data.EF.UnitOfWorkEF>();
+            services.AddTransient<Domain.Contracts.Infra.Data.IUnitOfWork, Data.EF.UnitOfWorkEF>();
 
             services.AddTransient<Domain.Contracts.Repositories.IPacienteReadRepository, Data.EF.Repositories.PacienteReadRepositoryEF>();
             services.AddTransient<Domain.Contracts.Repositories.IPacienteWriteRepository, Data.EF.Repositories.PacienteWriteRepositoryEF>();
         }
-        
+
+        private static void registerAppServices(IServiceCollection services)
+        {
+            services.AddTransient<Domain.Contracts.Infra.Service.ISendMail, Services.SendMail>();
+        }
+
     }
 }

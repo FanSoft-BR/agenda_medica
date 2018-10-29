@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace FanSoft.AM.Domain.Contracts.Infra
+namespace FanSoft.AM.Domain.Contracts.Infra.Data
 {
     public interface IUnitOfWork
     {

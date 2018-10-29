@@ -25,7 +25,7 @@ namespace FanSoft.AM.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]Domain.Commands.Paciente.Inserir.Request request)
+        public async Task<IActionResult> Post([FromBody]Domain.Mediator.Paciente.Inserir.Request request)
         {
 
             var response = await _mediator.Send(request).ConfigureAwait(false);

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace FanSoft.AM.Domain.Commands.Paciente.Inserir
+namespace FanSoft.AM.Domain.Mediator.Paciente.Inserir
 {
     public class Validator : AbstractValidator<Request>
     {
